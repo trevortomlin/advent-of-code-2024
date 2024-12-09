@@ -11,7 +11,7 @@ pub fn part_one(input: &str) -> Option<u32> {
         let mut new = e.replace("mul(", "");
         new = new.replace(")", "");
         let (first, second) = new.split_once(",").expect("Must have comma");
-        total =  total + first.parse::<u32>().unwrap() * second.parse::<u32>().unwrap();
+        total = total + first.parse::<u32>().unwrap() * second.parse::<u32>().unwrap();
     });
 
     Some(total)
@@ -27,7 +27,13 @@ pub fn part_two(input: &str) -> Option<u32> {
         match m {
             "do()" => enabled = true,
             "don't()" => enabled = false,
-            _ => if enabled {total += part_one(m).unwrap()} else {continue},
+            _ => {
+                if enabled {
+                    total += part_one(m).unwrap()
+                } else {
+                    continue;
+                }
+            }
         }
     }
     Some(total)
