@@ -1,5 +1,3 @@
-use std::collections::{HashMap, HashSet};
-
 use itertools::Itertools;
 
 advent_of_code::solution!(2);
