@@ -34,7 +34,7 @@ pub fn part_one(input: &str) -> Option<u32> {
 }
 
 fn dfs(val: i64, n: i64, cache: &mut HashMap<(i64, i64), i64>) -> i64 {
-    let mut ret = 0;
+    let ret;
     let val_str = val.to_string();
 
     if cache.contains_key(&(val, n)) {

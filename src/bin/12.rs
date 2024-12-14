@@ -1,7 +1,5 @@
 use std::collections::HashSet;
 
-use itertools::Itertools;
-
 advent_of_code::solution!(12);
 
 fn dfs(
